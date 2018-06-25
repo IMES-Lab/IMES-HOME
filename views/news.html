@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="/material.min.css">
+	<script src="/material.min.js"></script>
+	<style type="text/css">
+		.content {
+			margin: 40px 220px 40px 220px
+		}
+
+		table {
+			border-collapse: separate;
+		}
+
+		td {
+			padding: 5px 10px;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Simple header with scrollable tabs. -->
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		<header class="mdl-layout__header">
+			<div class="mdl-layout__header-row">
+				<!-- Title -->
+				<span class="mdl-layout-title">iMES LAB</span>
+			</div>
+			<!-- Tabs -->
+			<div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+				<a href="../index.html" class="mdl-layout__tab">Home</a>
+				<a href="../about.html" class="mdl-layout__tab">About</a>
+				<a href="../people.html" class="mdl-layout__tab">People</a>
+				<a href="../research.html" class="mdl-layout__tab">Research</a>
+				<a href="../news.html" class="mdl-layout__tab is-active">News</a>
+				<a href="../publication.html" class="mdl-layout__tab">Publication</a>
+				<a href="../memories.html" class="mdl-layout__tab">Memories</a>
+				<a href="../contact.html" class="mdl-layout__tab">Join Us</a>
+			</div>
+		</header>
+
+		<main class="mdl-layout__content">
+			<section class="mdl-layout__tab-panel is-active">
+				<div class="content">
+					<table>
+						<%for(var i=0;i<news.length;i++){%>
+							<tr>
+								<td>
+									<%if (i<2){%>
+										<img src="/images/star.png" />
+										<%}%>
+								</td>
+								<td>
+									<%if (i<2){%>
+										<b>
+											<%=news[i]["content"]%>
+										</b>
+										<%} else {%>
+											<span>
+												<%=news[i]["content"]%>
+											</span>
+											<%}%>
+								</td>
+							</tr>
+							<%}%>
+					</table>
+				</div>
+			</section>
+		</main>
+	</div>
+</body>
+
+</html>

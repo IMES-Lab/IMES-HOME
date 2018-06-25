@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="/material.min.css">
+	<script src="/material.min.js"></script>
+	<style type="text/css">
+		.content {
+			margin: 40px 220px 40px 220px
+		}
+
+		#map {
+			margin: 40px 220px 40px 220px;
+			width: 600px;
+			height: 400px;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Simple header with scrollable tabs. -->
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		<header class="mdl-layout__header">
+			<div class="mdl-layout__header-row">
+				<!-- Title -->
+				<span class="mdl-layout-title">iMES LAB</span>
+			</div>
+			<!-- Tabs -->
+			<div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+				<a href="../index.html" class="mdl-layout__tab">Home</a>
+				<a href="../about.html" class="mdl-layout__tab">About</a>
+				<a href="../people.html" class="mdl-layout__tab">People</a>
+				<a href="../research.html" class="mdl-layout__tab">Research</a>
+				<a href="../news.html" class="mdl-layout__tab">News</a>
+				<a href="../publication.html" class="mdl-layout__tab">Publication</a>
+				<a href="../memories.html" class="mdl-layout__tab">Memories</a>
+				<a href="../contact.html" class="mdl-layout__tab is-active">Join Us</a>
+			</div>
+		</header>
+
+		<main class="mdl-layout__content">
+			<section class="mdl-layout__tab-panel is-active">
+				<div class="content">
+					<p>
+						<h3>Contact</h3>
+
+						1342 Seongnamdaero, Sujeong-gu, Gachon University,</br>
+						Room #319 @ Woongji Hall</br>
+						Seongnam-si, Gyeonggi-do, South Korea</br>
+						</br>
+						Phone : +82-31-750-6968</br>
+						Email: j17.lee at gachon.ac.kr</br>
+						</br>
+						Office Hours: By appointment
+					</p>
+				</div>
+
+				<div id="map"></div>
+				<script>
+					var map;
+					function initMap() {
+						var uluru = { lat: 37.4494129, lng: 127.1295414 };
+						var map = new google.maps.Map(document.getElementById('map'), {
+							zoom: 17,
+							center: uluru
+						});
+						var marker = new google.maps.Marker({
+							position: uluru,
+							map: map
+						});
+					}
+				</script>
+				<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDnCrZMG4Y61tWhHVUFheqvzbaAGvgsth8&callback=initMap" async
+				 defer></script>
+			</section>
+		</main>
+</body>
+
+</html>

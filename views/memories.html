@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="/material.min.css">
+	<script src="/material.min.js"></script>
+	<style type="text/css">
+		.content {
+			margin: 40px 220px 40px 220px
+		}
+
+		div.card {
+			position: relative;
+			cursor: pointer;
+		}
+
+		div.card_img {
+			border: 6px solid black
+		}
+
+		div.card_label {
+			height: 36px;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			z-index: 1;
+			background-color: rgba(0, 0, 0, 0.4);
+		}
+
+		p.card_text {
+			text-align: center;
+			font-size: 22px;
+			vertical-align: middle;
+			color: #f0f0f0;
+		}
+
+		img.card_img {
+			width: 382px;
+			height: 216px;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Simple header with scrollable tabs. -->
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		<header class="mdl-layout__header">
+			<div class="mdl-layout__header-row">
+				<!-- Title -->
+				<span class="mdl-layout-title">iMES LAB</span>
+			</div>
+			<!-- Tabs -->
+			<div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+				<a href="../index.html" class="mdl-layout__tab">Home</a>
+				<a href="../about.html" class="mdl-layout__tab">About</a>
+				<a href="../people.html" class="mdl-layout__tab">People</a>
+				<a href="../research.html" class="mdl-layout__tab">Research</a>
+				<a href="../news.html" class="mdl-layout__tab">News</a>
+				<a href="../publication.html" class="mdl-layout__tab">Publication</a>
+				<a href="../memories.html" class="mdl-layout__tab is-active">Memories</a>
+				<a href="../contact.html" class="mdl-layout__tab">Join Us</a>
+			</div>
+		</header>
+
+		<main class="mdl-layout__content">
+			<section class="mdl-layout__tab-panel is-active">
+				<div class="content">
+					<table>
+						<%for(var i=0;i<memories.length;i++){%>
+							<%if(i%3==0){%>
+								<tr>
+									<%}%>
+										<td>
+											<div class="card">
+												<div class="card_img">
+													<img class="card_img" src=<%="images/memories/" + memories[i][ "image_name"] %> />
+												</div>
+												<div class="card_label">
+													<p class="card_text">
+														<%= memories[i]["description"] %>
+													</p>
+												</div>
+											</div>
+										</td>
+										<%}%>
+					</table>
+				</div>
+			</section>
+		</main>
+</body>
+
+</html>

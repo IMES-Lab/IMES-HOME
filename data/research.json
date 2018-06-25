@@ -1,0 +1,16 @@
+{
+	"research": [
+		{
+			"description": "Our research shows that distributing the energy based on a well-defined utility function converges to a unique equilibrium solution for maximizing the payoff of all participating competitive microgrids.",
+			"file_name": "08119910.pdf"
+		},
+		{
+			"description": "We newly model computation offloading competition when multiple clients compete with each other so as to reduce energy cost and improve computational performance.",
+			"file_name": "08093758.pdf"
+		},
+		{
+			"description": "We design an event-driven energy trading system among microgrids. In this approach, no expected waiting time for trading is required for sustaining an energy trading market.",
+			"file_name": "Distributed Energy Trading in Microgrids A Game-Theoretic Model and Its Equilibrium Analysis.pdf"
+		}
+	]
+}

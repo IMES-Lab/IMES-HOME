@@ -1,0 +1,30 @@
+{
+	"members": [
+		{
+			"image_name": "joohyunglee.jpg",
+			"description": "Prof.Joohhyung Lee_이주형 (iMES Leader)"
+		},
+		{
+			"image_name": "joohyunglee.jpg",
+			"description": "Yousung Yang_양유성 (prospective MS student)"
+		}
+	],
+	"ras": [
+		{
+			"description": "Sohyeon An_안소현 (Undergraduate Student)"
+		},
+		{
+			"description": "Baesik Kwon_권배식 (Undergraduate Student)"
+		},
+		{
+			"description": "Wonsang Lee_이원상 (Undergraduate Student)"
+		},
+		{
+			"description": "Sanga Lee_이상아 (Undergraduate Student)"
+		},
+		{
+			"description": "Yaejee Park_박예지 (Undergraduate Student)"
+		}
+	],
+	"pasts": {}
+}

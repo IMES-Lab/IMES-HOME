@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="/material.min.css">
+	<script src="/material.min.js"></script>
+</head>
+
+<body>
+	<style>
+		.content {
+			margin: 40px 220px 40px 220px
+		}
+
+		.title {
+			background: url("./images/title.png") center / cover;
+		}
+
+		.title_text {
+			text-align: right;
+			font-size: 40px;
+			font-weight: bold;
+			font-family: "Verdana"
+		}
+	</style>
+
+	<!-- Simple header with scrollable tabs. -->
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		<header class="title mdl-layout__header">
+			<div class="mdl-layout__header-row">
+				<!-- Title -->
+				<span class="mdl-layout-title">iMES LAB</span>
+			</div>
+
+			<div class="mdl-layout__header-row"></div>
+			<div style="width:800px; margin:0 auto;" class="mdl-layout__header-row center-items">
+				<span class="title_text"> Intelligence Networking<br><br> for<br><br> Media & Energy System Lab
+			</div>
+			<div class="mdl-layout__header-row"></div>
+			<div class="mdl-layout__header-row"></div>
+
+
+			<!-- Tabs -->
+			<div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+				<a href="../index.html" class="mdl-layout__tab is-active">Home</a>
+				<a href="../about.html" class="mdl-layout__tab">About</a>
+				<a href="../people.html" class="mdl-layout__tab">People</a>
+				<a href="../research.html" class="mdl-layout__tab">Research</a>
+				<a href="../news.html" class="mdl-layout__tab">News</a>
+				<a href="../publication.html" class="mdl-layout__tab">Publication</a>
+				<a href="../memories.html" class="mdl-layout__tab">Memories</a>
+				<a href="../contact.html" class="mdl-layout__tab">Join Us</a>
+			</div>
+		</header>
+
+		<main class="mdl-layout__content">
+			<section class="content mdl-layout__tab-panel is-active">
+				<table cellspacing="10px">
+					<tr>
+						<td>
+				<h3 style="font-weight: bold">Ongoing Research</h3>
+								<p>
+										iMES's research focus lies in designing/analyzing/implementing algorithmic and practical solutions of diverse networking problems for media and energy systems
+									</p>
+				<a href="../research.html">Learn More</a>
+				
+						</td>
+						<td></td>
+						<td>
+							<img width="200px" src="./images/research_icon.png"
+						</td>
+					</tr>
+				</table>
+
+				<div>
+					<h3 style="font-weight: bold">
+						News
+					</h3>
+					<p style="font-weight: bold">Current news about iMES Lab</p>
+
+					<table>
+						<tr><td><%= news[0]["content"] %></td></tr>
+						<tr><td><%= news[1]["content"] %></td></tr>
+						<tr><td><a href="../research.html">Learn More</a></td></tr>
+					</table>
+				</div>
+			</section>
+		</main>
+	</div>
+</body>
+
+</html>

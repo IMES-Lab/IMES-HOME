@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+
+<head>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="/material.min.css">
+	<script src="/material.min.js"></script>
+	<style type="text/css">
+		.content {
+			padding: 40px 220px 40px 220px;
+			color: #cdcdcd;
+		}
+
+		.mdl-layout__content {
+			background-color: #1f232c;
+		}
+
+		.logolabel {
+			font-size: 25px;
+			text-align: center;
+		}
+
+		.icontable {
+			margin: 0px auto;
+			border-spacing: 100px 20px;
+		}
+
+		.vl {
+			border-left: 4px solid #3fbeb3;
+			height: 128px;
+		}
+	</style>
+</head>
+
+<body>
+	<!-- Simple header with scrollable tabs. -->
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		<header class="mdl-layout__header">
+			<div class="mdl-layout__header-row">
+				<!-- Title -->
+				<span class="mdl-layout-title">iMES LAB</span>
+			</div>
+			<!-- Tabs -->
+			<div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+				<a href="../index.html" class="mdl-layout__tab">Home</a>
+				<a href="../about.html" class="mdl-layout__tab">About</a>
+				<a href="../people.html" class="mdl-layout__tab">People</a>
+				<a href="../research.html" class="mdl-layout__tab is-active">Research</a>
+				<a href="../news.html" class="mdl-layout__tab">News</a>
+				<a href="../publication.html" class="mdl-layout__tab">Publication</a>
+				<a href="../memories.html" class="mdl-layout__tab">Memories</a>
+				<a href="../contact.html" class="mdl-layout__tab">Join Us</a>
+			</div>
+		</header>
+
+		<main class="mdl-layout__content">
+			<section class="mdl-layout__tab-panel is-active">
+				<div class="content">
+					<table>
+						<tr>
+							<td>
+								<table class="icontable">
+									<tr>
+										<td>
+											<img src="/images/media.png" width="96px" />
+											<p class="logolabel">Media</p>
+										</td>
+										<td>
+											<div class="vl"></div>
+										</td>
+										<td>
+											<img src="/images/network.png" width="96px" />
+											<p class="logolabel">Network</p>
+										</td>
+										<td>
+												<div class="vl"></div>
+											</td>
+										<td>
+											<img src="/images/energy.png" width="96px" />
+											<p class="logolabel">Energy</p>
+										</td>
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<% for(var i=0; i<research.length; i++){ %>
+									<span>
+								<%= research[i]["description"] %>
+							</span>
+									<a href=<%=encodeURI( "publication/"+research[i][ "file_name"]) %>><i> Read more</i><br><br></a>
+
+									<%}%>
+							</td>
+						</tr>
+					</table>
+				</div>
+			</section>
+		</main>
+	</div>
+</body>
+
+</html>
